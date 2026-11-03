@@ -1,0 +1,23 @@
+{
+  "name": "Kickscor",
+  "short_name": "Kickscor",
+  "description": "Note les matchs que tu regardes, écris ta critique, juge l'arbitre et fais tes pronos.",
+  "start_url": "/fr",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f1f3ef",
+  "theme_color": "#0b6b43",
+  "lang": "fr",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" },
+    { "src": "/icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" }
+  ],
+  "categories": ["sports", "social"],
+  "shortcuts": [
+    { "name": "Matchs du jour", "url": "/fr", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Pronos", "url": "/fr/pronos", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

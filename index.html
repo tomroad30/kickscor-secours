@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kickscor · mi-temps</title>
+<meta name="description" content="Kickscor fait une petite pause technique. On revient très vite.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f1f3ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b110e" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="preload" href="/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face {
+    font-family: 'Archivo';
+    src: url('/archivo.woff2') format('woff2');
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-display: swap;
+  }
+  :root {
+    color-scheme: light dark;
+    --bg: #f1f3ef;
+    --surface: #ffffff;
+    --ink: #121a15;
+    --muted: #55615a;
+    --line: #dde3dd;
+    --pitch: #0b6b43;
+    --pitch-ink: #ffffff;
+    --card: #ffc52e;
+    --red: #c93526;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b110e;
+      --surface: #121a16;
+      --ink: #e8eee9;
+      --muted: #9eaba3;
+      --line: #222f28;
+      --pitch: #3fbb80;
+      --pitch-ink: #0b110e;
+      --red: #ff5f4f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; accent-color: var(--pitch); caret-color: var(--pitch); }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    padding: max(20px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+  }
+  ::selection { background: var(--pitch); color: var(--pitch-ink); }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--pitch); outline-offset: 3px; border-radius: 6px; }
+
+  .wrap { width: 100%; max-width: 30rem; margin: 0 auto; display: flex; flex-direction: column; flex: 1; }
+
+  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+  .brand svg { width: 30px; height: 30px; display: block; }
+
+  main { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 48px 0; }
+
+  .sheet {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    margin-bottom: 36px;
+  }
+  .status { display: inline-flex; align-items: center; gap: 6px; width: 46px; flex-shrink: 0; color: var(--red); font-weight: 700; font-size: 13px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+  .teams { flex: 1; min-width: 0; display: grid; gap: 6px; font-size: 15px; }
+  .team { display: flex; justify-content: space-between; gap: 12px; }
+  .team b { font-weight: 600; }
+  .team span { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  h1 {
+    margin: 0 0 14px;
+    font-weight: 800;
+    font-stretch: 66%;
+    font-size: clamp(56px, 18vw, 88px);
+    line-height: 0.9;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  p { margin: 0 0 28px; font-size: 17px; color: var(--muted); text-wrap: pretty; max-width: 34ch; }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 22px;
+    border-radius: 999px;
+    background: var(--pitch);
+    color: var(--pitch-ink);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    align-self: flex-start;
+    transition: filter 150ms ease-out;
+  }
+  .btn:hover { filter: brightness(1.08); }
+
+  footer { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="/" aria-label="Kickscor">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0b6b43"/><rect x="20.5" y="14" width="25.6" height="35.8" rx="3" transform="rotate(-10 32 32)" fill="#ffc52e"/></svg>
+      kickscor
+    </a>
+  </header>
+
+  <main>
+    <div class="sheet" aria-hidden="true">
+      <span class="status"><span class="dot"></span>MT</span>
+      <div class="teams">
+        <div class="team"><b>Kickscor</b><span>–</span></div>
+        <div class="team"><b>Seconde période</b><span>bientôt</span></div>
+      </div>
+    </div>
+
+    <h1>Mi-temps.</h1>
+    <p>Kickscor fait une petite pause technique. <strong>Tes notes, tes critiques et tes pronos sont bien gardés</strong> : tu retrouves tout au retour.</p>
+    <a class="btn" href="https://www.instagram.com/kickscor_off/" rel="noopener">
+      Suivre Kickscor sur Instagram
+    </a>
+  </main>
+
+  <footer>Les alertes de match reprennent avec le site.</footer>
+</div>
+</body>
+</html>
